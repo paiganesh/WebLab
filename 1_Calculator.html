@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Calculator</title>
+		<style>
+			* 			{	text-align: center;		}
+			input#result{	font-weight: bold;		}
+			input 		{	margin:10px;			}
+		</style>
+	</head>
+	<body>
+		<h1>Simple Calculator</h1>
+		<input type="number" id="a" placeholder="Enter a number" autofocus/><br>
+		<input type="number" id="b" placeholder="Enter a number"/><br>
+		
+		<button onclick="result.value = parseFloat(a.value) + parseFloat(b.value)">+</button>
+		<button onclick="result.value = a.value - b.value">-</button>
+		<button onclick="result.value = a.value * b.value">x</button>
+		<button onclick="result.value = a.value / b.value">/</button><br>
+		
+		<input type="text" id="result" placeholder="Result" readonly/><br>
+	</body>
+</html>

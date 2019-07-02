@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checking Vowel & Reversing Number</title>
+        <script>
+            function findvowel(string)
+            {
+                var index = string.search(/[aeiou]/i);
+                strOutput.innerText = (index >= 0)? ("Vowel found at position " + (index + 1)) : "No vowel found.";
+            }
+            
+            function reverse(n)
+            {
+                var reverseNo = 0;
+
+                for(; n != 0; n = Math.floor(n / 10))
+                    reverseNo = reverseNo * 10 + n % 10;
+                
+                numOutput.innerText = reverseNo;
+            }
+        </script>
+        <style type="text/css">
+            label    {    font-weight: bold;    }
+            div[id]  {    display: inline;      }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label for="str">Enter a String:</label> <input type="text" id="str" autofocus>
+            <button onclick = "findvowel(str.value);">Find Vowel</button>
+            <br><br>
+            <label>Output:</label> <div id="strOutput"></div>
+        </div>
+        <br>
+        <div>
+            <label for="number">Enter a Number:</label> <input type="number" id="number">
+            <button onclick = "reverse(number.value);">Reverse</button>
+            <br><br>    
+            <label>Output:</label> <div id="numOutput"></div>
+        </div>
+    </body>
+</html>

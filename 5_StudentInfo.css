@@ -1,0 +1,26 @@
+/* CSS Document */
+students {
+	margin:20px;
+}
+
+student, columns {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 200px);
+	grid-gap: 10px;
+    border-bottom: 1px solid blue;
+	color: darkblue;
+	padding: 15px;
+}
+
+columns {
+	background: orange;
+	font-weight:bold;
+}
+
+student:nth-child(even) {
+	background: lightgrey;
+}
+
+student:hover {
+    background: lightblue; 
+}

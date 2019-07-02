@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Growing Shrinking Text</title>
+		<script>
+			var size = 12, growing = true;
+						
+			function controlText()
+			{		
+				if(growing && size < 50)
+					message.style.fontSize = ++size + "pt";
+				else if(!growing && size > 5)
+					message.style.fontSize = --size + "pt";
+				else
+					clearInterval();
+
+				if(size == 50)
+				{
+					message.style.color = "blue";
+					message.innerText = "TEXT-SHRINKING";
+					growing = false;
+				}
+			}			
+		</script>
+		<style>
+			#message {
+				color       :red; 
+				text-align  :center; 
+				padding-top :150px;
+			}
+		</style>
+	</head>
+	<body onload="setInterval(controlText, 100);">
+		<div id="message">TEXT-GROWING</div>
+	</body>
+</html>
